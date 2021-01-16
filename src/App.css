@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #af9a7d;
+  /*--primaryColor: #af9a7d;*/
+  --primaryColor: rgb(176, 24, 66);
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
+  --mainBlack: rgb(26, 59, 114);
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
@@ -100,6 +101,12 @@ h6 {
 .nav-header {
   display: flex;
   justify-content: space-between;
+}
+.nav-header-logo {
+  height: 60px;
+}
+.nav-header-logo img {
+  height: 100%;
 }
 .nav-btn {
   background: transparent;

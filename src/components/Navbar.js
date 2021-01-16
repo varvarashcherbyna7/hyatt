@@ -1,6 +1,7 @@
 import React from "react";
-import logo from "../images/logo.svg";
-import {FaAlignRight} from "react-icons/all";
+// import logo from "../images/logo.svg";
+import logo from "../images/hyatt-hotels-1.svg";
+import {FaAlignRight, FaTimes} from "react-icons/all";
 import {Link} from "react-router-dom";
 
 class Navbar extends React.Component {
@@ -17,10 +18,15 @@ class Navbar extends React.Component {
                 <div className="nav-center">
                     <div className="nav-header">
                         <Link to="/">
-                            <img src={logo} alt="Beach Resort logo"/>
+                            <div className="nav-header-logo">
+                                <img src={logo} alt="Beach Resort logo"/>
+                            </div>
                         </Link>
                         <button type="button" className="nav-btn" onClick={this.handleToggle}>
-                            <FaAlignRight className="nav-icon"/>
+                            {   !this.state.isOpen
+                                ? <FaAlignRight className="nav-icon"/>
+                                : <FaTimes className="nav-icon"/>
+                            }
                         </button>
                     </div>
                     <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
